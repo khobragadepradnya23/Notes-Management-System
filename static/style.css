@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #25283d;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #5546c8, #8b5cf6);
+    color: white;
+    padding: 28px 20px;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header p {
+    margin-bottom: 0;
+    color: #eeeaff;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    margin-bottom: 4px;
+    font-size: 32px;
+}
+
+.welcome p,
+.notes-heading p {
+    color: #73758a;
+    margin-top: 0;
+}
+
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(35, 37, 80, 0.07);
+    margin-bottom: 38px;
+}
+
+.form-card h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 16px 0 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9dbea;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #b7adff;
+    border-color: #7665ed;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+#charCount {
+    color: #77798b;
+    font-size: 13px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.primary {
+    background: #6353d9;
+    color: white;
+}
+
+.primary:hover {
+    background: #4f40bc;
+}
+
+.secondary {
+    background: #eeecff;
+    color: #5141b6;
+}
+
+.secondary:hover {
+    background: #dfdbff;
+}
+
+.danger {
+    background: #ffe8e8;
+    color: #bd3030;
+}
+
+.danger:hover {
+    background: #ffd4d4;
+}
+
+.notes-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.notes-heading h2 {
+    margin-bottom: 3px;
+}
+
+.search-form {
+    display: flex;
+    gap: 8px;
+    width: min(100%, 430px);
+}
+
+.search-form input {
+    min-width: 0;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.note-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border-top: 4px solid #7968e8;
+    box-shadow: 0 4px 16px rgba(35, 37, 80, 0.05);
+    overflow-wrap: anywhere;
+}
+
+.note-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.note-content {
+    white-space: pre-wrap;
+}
+
+.note-date {
+    color: #77798b;
+    font-size: 12px;
+    border-top: 1px solid #eeeef5;
+    padding-top: 12px;
+    margin-top: 18px;
+}
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.delete-form {
+    margin: 0;
+}
+
+.message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.success {
+    background: #e0f7e9;
+    color: #17683b;
+}
+
+.error {
+    background: #ffe8e8;
+    color: #a52222;
+}
+
+.empty-state {
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    padding: 45px 20px;
+}
+
+.empty-icon {
+    font-size: 42px;
+}
+
+.empty-state p {
+    color: #77798b;
+}
+
+.edit-container {
+    max-width: 750px;
+}
+
+.footer {
+    text-align: center;
+    color: #77798b;
+    padding: 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .notes-heading {
+        align-items: stretch;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .form-footer {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .welcome h1 {
+        font-size: 27px;
+    }
+}

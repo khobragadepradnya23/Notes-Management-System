@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note | NoteSpace</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <div class="logo">✎ NoteSpace</div>
+        <p>Update your note</p>
+    </div>
+</header>
+
+<main class="container edit-container">
+
+    <section class="form-card">
+        <h1>Edit Note</h1>
+
+        <form action="{{ url_for('edit_note', note_id=note.id) }}"
+              method="POST">
+
+            <label for="title">Note Title</label>
+            <input type="text" id="title" name="title"
+                   maxlength="200"
+                   value="{{ note.title }}" required>
+
+            <label for="content">Note Content</label>
+            <textarea id="content" name="content"
+                      rows="8" required>{{ note.content }}</textarea>
+
+            <div class="form-footer">
+                <a href="{{ url_for('index') }}"
+                   class="btn secondary">Cancel</a>
+
+                <button type="submit" class="btn primary">
+                    Update Note
+                </button>
+            </div>
+        </form>
+    </section>
+
+</main>
+
+</body>
+</html>
